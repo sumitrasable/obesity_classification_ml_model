@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity Prediction</title>
+    <style>
+        body {
+            background-image: url('/static/images/images.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            text-align: center; /* Center align text content */
+            font-family: Arial, sans-serif; /* Specify font */
+            color: white; /* Text color */
+        }
+        .container {
+            margin-top: 100px; /* Adjust margin from the top */
+        }
+        .form-container {
+            width: 50%; /* Set width for the form */
+            margin: 0 auto; /* Center the form horizontally */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for form */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Add border radius */
+        }
+        input[type="text"], select {
+            width: 100%; /* Set input width to 100% */
+            padding: 10px; /* Add padding */
+            margin-bottom: 10px; /* Add margin bottom */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green submit button */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Add cursor pointer */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Obesity Prediction</h1>
+            <form action="/predict" method="post">
+                <label for="Age">Age:</label>
+                <input type="text" id="Age" name="Age" required><br>
+
+                <label for="Gender">Gender:</label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+
+                <label for="Height">Height (cm):</label>
+                <input type="text" id="Height" name="Height" required><br>
+
+                <label for="Weight">Weight (kg):</label>
+                <input type="text" id="Weight" name="Weight" required><br>
+
+                <label for="BMI">BMI:</label>
+                <input type="text" id="BMI" name="BMI" required><br>
+
+                <label for="PhysicalActivityLevel">Physical Activity Level:</label>
+                <select id="PhysicalActivityLevel" name="PhysicalActivityLevel">
+                    <option value="1">1 - Sedentary</option>
+                    <option value="2">2 - Lightly Active</option>
+                    <option value="3">3 - Moderately Active</option>
+                    <option value="4">4 - Very Active</option>
+                </select><br>
+
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

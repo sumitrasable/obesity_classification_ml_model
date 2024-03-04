@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url('background_image.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            text-align: center; /* Center align text content */
+            font-family: Arial, sans-serif; /* Specify font */
+            color: white; /* Text color */
+        }
+        .container {
+            margin-top: 100px; /* Adjust margin from the top */
+        }
+        .result-container {
+            width: 50%; /* Set width for the result container */
+            margin: 0 auto; /* Center the result container horizontally */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for container */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Add border radius */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1>Prediction Result</h1>
+            <p>The predicted obesity level is: {{ prediction }}</p>
+        </div>
+    </div>
+</body>
+</html>
